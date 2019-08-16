@@ -1,8 +1,8 @@
-**The solution to kaggle competition Generative Dog Images**
-the detail description is here:
-https://www.kaggle.com/c/generative-dog-images/discussion/104281#latest-600250.
+**The solution to kaggle competition Generative Dog Images**<br>
+The detailed description is here:<br>
+https://www.kaggle.com/c/generative-dog-images/discussion/104281#latest-600250 <br>
 
-The code is base on the two projects:<pre>
+The code is based on the two projects:<br>
 https://github.com/ajbrock/BigGAN-PyTorch<br>
 https://github.com/rosinality/style-based-gan-pytorch
 
