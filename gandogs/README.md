@@ -12,8 +12,8 @@ https://github.com/rosinality/style-based-gan-pytorch
 1.1 dog_preprocess.py  line 14 and line 15: 
 1.2 utils.py line 542
 <br>
-2. Run:
-<pre>python dog_preprocess.py to save dogs with same type to dir accordingly.</pre>
+2. Run the following script to save dogs with same type to dir accordingly.:
+<pre>python dog_preprocess.py </pre>
 <br>
 3. Run:
 <pre>python calculate_inception_moments.py  --base_root ../output --dataset DogOrigin96</pre>
