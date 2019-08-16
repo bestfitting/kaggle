@@ -1,6 +1,6 @@
 **The solution to kaggle competition Generative Dog Images**<br><br>
 The detailed description is here:<br>
-https://www.kaggle.com/c/generative-dog-images/discussion/104281#latest-600250 <br>
+https://www.kaggle.com/c/generative-dog-images/discussion/104281 <br>
 
 The code is based on the two projects:<br>
 https://github.com/ajbrock/BigGAN-PyTorch<br>
