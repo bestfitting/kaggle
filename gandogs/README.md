@@ -1,4 +1,4 @@
-**The solution to kaggle competition Generative Dog Images**<br>
+**The solution to kaggle competition Generative Dog Images**<br><br>
 The detailed description is here:<br>
 https://www.kaggle.com/c/generative-dog-images/discussion/104281#latest-600250 <br>
 
@@ -15,7 +15,7 @@ https://github.com/rosinality/style-based-gan-pytorch
 2. Run:
 <pre>python dog_preprocess.py to save dogs with same type to dir accordingly.</pre>
 <br>
-3. run:
+3. Run:
 <pre>python calculate_inception_moments.py  --base_root ../output --dataset DogOrigin96</pre>
 <br>
 4.FID 12.4<br>
