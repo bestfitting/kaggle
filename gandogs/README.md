@@ -26,3 +26,4 @@ export CUDA_VISIBLE_DEVICES=0;python train.py --shuffle --batch_size 32 --num_G_
 <pre>
 export CUDA_VISIBLE_DEVICES=0;python train.py --shuffle --batch_size 32 --num_G_accumulations 1 --num_D_accumulations 1 --num_epochs 200 --num_D_steps 1 --G_lr 1e-4 --D_lr 6e-4 --dataset DogOrigin96 --bottom_width 6 --G_ortho 0.0 --G_attn 0 --D_attn 0 --G_init ortho --D_init ortho --ema --use_ema --ema_start 2000 --test_every 25 --save_every 10 --num_best_copies 5 --num_save_copies 2 --G_ch 24 --D_ch 24 --seed 0 --augment 1 --add_blur --add_style --on_kaggle --base_root ../output --crop_mode 3 --experiment_name i96_ch24_hinge_ema_dstep1_bs32_noatt_glr0001_glr0006_aug_init_ortho_blur_style_origin_crop_mode3
 </pre>
+

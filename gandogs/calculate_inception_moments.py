@@ -66,6 +66,7 @@ def prepare_parser():
 def run(config):
   # Get loader
   config['drop_last'] = False
+  config = utils.update_config_roots(config)
   loaders = utils.get_data_loaders(**config)
 
   # Load inception net

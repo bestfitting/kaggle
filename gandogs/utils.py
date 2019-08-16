@@ -681,7 +681,7 @@ def get_data_loaders(dataset, data_root=None, augment=False, batch_size=64,
   if root_dict[dataset].startswith('/'):
     data_root = root_dict[dataset]
   else:
-    data_root=os.path.join(kwargs['base_root'],data_root)
+    # data_root=os.path.join(kwargs['base_root'],data_root)
     data_root += '/%s' % root_dict[dataset]
   print('Using dataset root location %s' % data_root)
 
