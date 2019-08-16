@@ -8,8 +8,8 @@ https://github.com/rosinality/style-based-gan-pytorch
 
 **How to run:**
 <br>
-1.confige data dir according to you local setting
-1.1 dog_preprocess.py  line 14 and line 15: 
+1.confige data dir according to you local setting<br>
+1.1 dog_preprocess.py  line 14 and line 15 <br>
 1.2 utils.py line 542
 <br>
 2. Run the following script to save dogs with same type to dir accordingly.:
