@@ -2,11 +2,12 @@
 the detail description is here:
 https://www.kaggle.com/c/generative-dog-images/discussion/104281#latest-600250.
 
-The code is base on the two projects:
-https://github.com/ajbrock/BigGAN-PyTorch
+The code is base on the two projects:<pre>
+https://github.com/ajbrock/BigGAN-PyTorch<br>
 https://github.com/rosinality/style-based-gan-pytorch
 
 **How to run:**
+<br>
 1.confige data dir according to you local setting
 1.1 dog_preprocess.py  line 14 and line 15: 
 1.2 utils.py line 542
