@@ -1,10 +1,8 @@
 0. Environment and file descriptions
 0.0 The basic Runtime Environment is python3.6, pytorch1.1.0, you can refer to requriements.txt to set up your environment.
-0.1 siim_open.7z: my code
-0.2 For all the 7z files, you can extract them with: 7z x siim_open.7z
 
 1. Prepare data
-1.1 Please unpack siim_open.7z into a directory, I refer it as: CODE_DIR
+1.1 I refer the siim_acr dir on your local machine as CODE_DIR
 1.2 Please config your local directory in CODE_DIR/src/config/config.py
 1.3 Please move dicom-images-train and dicom-images-test-stage_1 to DATA_DIR/train/dicom_files (provided by Kaggle forum, is not included in my solution file)
 1.4 Please move dicom-images-test-stage_2 to DATA_DIR/test/dicom_files (provided by Kaggle forum, is not included in my solution file)
