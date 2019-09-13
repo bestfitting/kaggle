@@ -1,0 +1,9 @@
+tqdm==4.15.0
+requests==2.14.2
+numpy==1.17.0
+pandas==0.23.1
+scipy==1.1.0
+torch==1.1.0
+torchvision==0.3.0
+mlcrate==0.1.0
+multiprocess==0.70.5
