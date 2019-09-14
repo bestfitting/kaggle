@@ -24,10 +24,7 @@ class ResnetUnet(nn.Module):
         self.attention_type = attention_type
         self.position_encode = position_encode
         self.out_channel = out_channel
-        if attention_type == 'cbam_v0a':
-            decoder_kernels = [1, 1, 1, 1, 1]
-        else:
-            decoder_kernels = [1, 1, 1, 1, 1]
+        decoder_kernels = [1, 1, 1, 1, 1]
         if feature_net == 'resnet18':
             self.resnet = resnet18()
             self.EX = 1

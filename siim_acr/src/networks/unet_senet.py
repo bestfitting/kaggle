@@ -24,11 +24,7 @@ class SEnetUnet(nn.Module):
         self.attention = attention_type is not None
         self.attention_type = attention_type
         self.position_encode = position_encode
-
-        if attention_type == 'cbam_v0a':
-            decoder_kernels = [1, 1, 1, 1, 1]
-        else:
-            decoder_kernels = [1, 1, 1, 1, 1]
+        decoder_kernels = [1, 1, 1, 1, 1]
         if feature_net == 'se_resnext50_32x4d':
             self.backbone = se_resnext50_32x4d()
             self.EX = 4
