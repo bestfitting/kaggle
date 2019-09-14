@@ -16,14 +16,12 @@ class SEnetUnet(nn.Module):
     def __init__(self,
                  feature_net='se_resnext50_32x4d',
                  attention_type=None,
-                 position_encode=False,
                  reduction=16,
                  pretrained_file=None,
                  ):
         super().__init__()
         self.attention = attention_type is not None
         self.attention_type = attention_type
-        self.position_encode = position_encode
         decoder_kernels = [1, 1, 1, 1, 1]
         if feature_net == 'se_resnext50_32x4d':
             self.backbone = se_resnext50_32x4d()
@@ -60,27 +58,22 @@ class SEnetUnet(nn.Module):
         self.decoder5 = Decoder(512*self.EX + 256*self.EX, 512, 32,
                                 attention_type=att_type,
                                 attention_kernel_size=decoder_kernels[0],
-                                position_encode=position_encode,
                                 reduction=reduction)
         self.decoder4 = Decoder(256*self.EX + 32, 256, 32,
                                 attention_type=att_type,
                                 attention_kernel_size=decoder_kernels[1],
-                                position_encode=position_encode,
                                 reduction=reduction)
         self.decoder3 = Decoder(128*self.EX + 32, 128, 32,
                                 attention_type=att_type,
                                 attention_kernel_size=decoder_kernels[2],
-                                position_encode=position_encode,
                                 reduction=reduction)
         self.decoder2 = Decoder(64*self.EX + 32, 64, 32,
                                 attention_type=att_type,
                                 attention_kernel_size=decoder_kernels[3],
-                                position_encode=position_encode,
                                 reduction=reduction)
         self.decoder1 = Decoder(32, 32, 32,
                                 attention_type=att_type,
                                 attention_kernel_size=decoder_kernels[4],
-                                position_encode=position_encode,
                                 reduction=reduction)
         self.logit = nn.Sequential(
             ConvBnRelu2d(160, 64, kernel_size=3, padding=1),

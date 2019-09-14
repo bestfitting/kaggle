@@ -13,7 +13,6 @@ class ResnetUnet(nn.Module):
 
     def __init__(self,feature_net='resnet34',
                  attention_type=None,
-                 position_encode=False,
                  reduction=16,
                  reslink=False,
                  out_channel=1,
@@ -22,7 +21,6 @@ class ResnetUnet(nn.Module):
         super().__init__()
         self.attention = attention_type is not None
         self.attention_type = attention_type
-        self.position_encode = position_encode
         self.out_channel = out_channel
         decoder_kernels = [1, 1, 1, 1, 1]
         if feature_net == 'resnet18':
@@ -55,25 +53,21 @@ class ResnetUnet(nn.Module):
         self.decoder4 = Decoder(256*self.EX + 32, 256, 32,
                                 attention_type=att_type,
                                 attention_kernel_size=decoder_kernels[1],
-                                position_encode=position_encode,
                                 reduction=reduction,
                                 reslink=reslink)
         self.decoder3 = Decoder(128*self.EX + 32, 128, 32,
                                 attention_type=att_type,
                                 attention_kernel_size=decoder_kernels[2],
-                                position_encode=position_encode,
                                 reduction=reduction,
                                 reslink=reslink)
         self.decoder2 = Decoder(64*self.EX + 32, 64, 32,
                                 attention_type=att_type,
                                 attention_kernel_size=decoder_kernels[3],
-                                position_encode=position_encode,
                                 reduction=reduction,
                                 reslink=reslink)
         self.decoder1 = Decoder(32, 32, 32,
                                 attention_type=att_type,
                                 attention_kernel_size=decoder_kernels[4],
-                                position_encode=position_encode,
                                 reduction=reduction,
                                 reslink=reslink)
 
@@ -95,7 +89,6 @@ class ResnetUnet(nn.Module):
         self.decoder5 = Decoder(decoder5_channels, 512, 32,
                                 attention_type=att_type,
                                 attention_kernel_size=decoder_kernels[0],
-                                position_encode=position_encode,
                                 reduction=reduction,
                                 reslink=reslink)
 
