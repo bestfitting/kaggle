@@ -18,6 +18,8 @@ def dice_score(prob, truth, threshold=0.5):
     score = score.sum() / num
     return score
 
+#refer to
+#https://www.kaggle.com/c/tgs-salt-identification-challenge/discussion/69053#latest-563912
 class SymmetricLovaszLoss(nn.Module):
     def __init__(self, weight=None, size_average=True):
         super(SymmetricLovaszLoss, self).__init__()
